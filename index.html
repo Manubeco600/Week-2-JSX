@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Lets the browser read special characters correctly -->
     <meta charset="UTF-8">
+    <!-- Scales the layout to the screen width on phones -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Text shown in the browser tab -->
     <title>Pricing Plans — HTML version</title>
+
+    <!-- Opens the font connection early so Inter loads faster -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Font files themselves come from this second domain -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inter, in the weights used on this page -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Visual styles, shared with the JSX version -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Badge that marks this file as the static HTML version -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+
+    <!-- Row that holds every pricing plan -->
     <div class="cards-container">
+
+        <!-- Hobby — name, price, features, then the action -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Hobby</h3>
@@ -20,6 +33,7 @@
                 </p>
                 <div class="card-content">
                     <p class="includes-text">Includes:</p>
+                    <!-- Each row is a checkmark plus one benefit -->
                     <ul class="features-list">
                         <li>
                             <span class="checkmark">✓</span>
@@ -36,13 +50,17 @@
                     </ul>
                 </div>
             </div>
+            <!-- Quiet button. Looks come from .download-button; .secondary adds none -->
             <button class="download-button secondary">Download</button>
         </div>
+
+        <!-- Pro — same pieces as Hobby, with a highlighted button -->
         <div class="card">
             <div class="card-top">
-                <h3 class="card-title">Pro</h3>
+                <h3 class="card-title"Org</h3>
+                <!-- Amount and billing period share one line -->
                 <p class="card-price">
-                    <span class="card-price-amount">$20</span>
+                    <span class="card-price-amount">$30</span>
                     <span class="card-price-period">/mo.</span>
                 </p>
                 <div class="card-content">
@@ -65,9 +83,63 @@
                             Maximum context windows
                         </li>
                     </ul>
+                    <button class="download-button primary">Get Pro</button>
                 </div>
             </div>
-            <button class="download-button primary">Get Pro</button>
+            <!-- Dark button. .primary replaces the default fill and text color -->
+        </div>
+        <div class="card">
+            <div class="card-top">
+                <h3 class="card-title">Pro</h3>
+                <p class="card-price">
+                    <span class="card-price-amount">$20</span>
+                    <span class="card-price-period">/mo.</span>
+                </p>
+                <div class="card-content">
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                </div>
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Shared team rules
+                        </li>
+                    </ul>
+                </div>
+        </div>          
+        <button class="download-button primary">Get Pro</button>
+
+        <!-- Enterprise — same pieces as Pro, added as the next card in the row -->
+        <div class="card">
+            <div class="card-top">
+                <h3 class="card-title">Enterprise</h3>
+                <p class="card-price">
+                    <span class="card-price-amount">Custom</span>
+                </p>
+                <div class="card-content">
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Shared team rules
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Centralized billing
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Usage analytics
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Priority support
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Quiet button, same style as Hobby -->
+            <button class="download-button secondary">Contact sales</button>
         </div>
     </div>
 </body>

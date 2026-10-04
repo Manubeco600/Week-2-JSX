@@ -1,9 +1,11 @@
+/* Reset — clears browser spacing so margins come only from these rules. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Page — typeface, background, and centering for the whole screen. */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +16,7 @@ body {
     padding: 20px;
 }
 
+/* Cards row — plans sit side by side with a fixed gap. */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +26,7 @@ body {
     align-items: flex-start;
 }
 
+/* Card — one plan. A column so the button can rest at the bottom. */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +38,13 @@ body {
     flex-shrink: 0;
 }
 
+/* Card top — stacks the name, price, and feature list. */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* Plan name. */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +53,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price line — amount and period align to the same text baseline. */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -54,32 +61,38 @@ body {
     align-items: baseline;
 }
 
+/* Price amount, such as “Free” or “$20”. */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Billing period, such as “/mo.”. */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Space between the feature list and the button. */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* Short line above the list, such as “Includes:”. */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Feature list — default bullets removed. */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Feature row — checkmark and label on one line. */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,6 +101,7 @@ body {
     color: #26251e;
 }
 
+/* Checkmark in front of each benefit. */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +109,7 @@ body {
     font-weight: 400;
 }
 
+/* Button — pill shape, pinned to the bottom of the card. */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -109,27 +124,33 @@ body {
     transition: background-color 0.2s ease;
 }
 
+/* Hover — slightly darker fill. */
 .download-button:hover {
     background-color: #D8D6CE;
 }
 
+/* Press — same fill as hover. */
 .download-button:active {
     background-color: #D8D6CE;
 }
 
+/* Primary button — dark fill for the highlighted plan. */
 .download-button.primary {
     background-color: #111;
     color: #fff;
 }
 
+/* Primary hover — a step lighter than the resting fill. */
 .download-button.primary:hover {
     background-color: #333;
 }
 
+/* Primary press — same fill as primary hover. */
 .download-button.primary:active {
     background-color: #333;
 }
 
+/* Version badge — fixed label centered at the top of the screen. */
 .page-label {
     position: fixed;
     top: 16px;
@@ -143,6 +164,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Emphasized words inside the badge, such as “HTML version”. */
 .page-label strong {
     color: #333;
 }
