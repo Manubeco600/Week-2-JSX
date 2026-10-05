@@ -149,6 +149,23 @@ body {
 .download-button.primary:active {
     background-color: #333;
 }
+.download-button.tertiary {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+}
+
+/* Tertiary hover — a step lighter than the resting fill. */
+.download-button.tertiary:hover {
+    background-color: #b2b1ab;
+    color: #333;
+}
+
+/* Tertiary press — same fill as tertiary hover. */
+.download-button.tertiary:active {
+    background-color: #b2b1ab;
+    color: #333;
+}
 
 /* Version badge — fixed label centered at the top of the screen. */
 .page-label {
