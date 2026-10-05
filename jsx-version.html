@@ -57,7 +57,7 @@
                 title: 'Hobby',
                 price: 'Free',
                 includesText: 'Includes:',
-                features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions'],
+                features: ['No credit card required', 'Limited Agent requests', 'Limited Tab completions', 'Limited Manu members'],
                 buttonText: 'Download',
                 buttonVariant: 'secondary',
             };
@@ -70,9 +70,18 @@
                     'Unlimited Tab completions',
                     'Background Agents',
                     'Maximum context windows',
+                    'Maximum Manu members',
                 ],
                 buttonText: 'Get Pro',
-                buttonVariant: 'primary',
+                buttonVariant: 'tertiary',
+            };
+            const orgPlan = {
+                title: 'Org',
+                price: '$30/mo.',
+                includesText: 'Everything in Pro, plus:',
+                features: ['Maximum Manu members', 'Shared team rules', 'Centralized billing', 'Usage analytics', 'Priority support'],
+                buttonText: 'Get Org',
+                buttonVariant: 'secondary',
             };
 
             return (
@@ -84,6 +93,7 @@
                         {/* This is the same as writing: title="Hobby" price="Free" includesText="Includes:" etc. */}
                         <PricingCard {...hobbyPlan} />
                         <PricingCard {...proPlan} />
+                        <PricingCard {...orgPlan} />
                     </div>
                 </>
             );
